@@ -1,7 +1,3 @@
-# web scrape stories from webbrowserrrr 
-# filter away spaces
-#     Make sure it starts with a capital letter and end at . instead of newline
-
 import curses
 from curses import wrapper
 import time
@@ -38,7 +34,6 @@ def display_text(stdscr, target, current, wpm=0):
 def load_text():
     with open("words.txt", "r") as f:
         words = f.readlines()
-        word = random.choice(words).strip()
         sentence = []
         for i in range(5):
             sentence.append(random.choice(words).strip())
